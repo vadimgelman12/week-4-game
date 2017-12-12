@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+  <title>Crystal Collector</title>
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+
+
+
+
+</head>
+
+<body background="http://1-background.com/images/ultraviolet/ultraviolet-stars-background.jpg">
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Crystal Collector</h1>
+      <h4 class="lead">Collect crystals by clicking on them.</h3>
+      <p>There are 4 crystals below.  Each crystal has a point value associated with it.  Clicking on a crystal will add the value to your score.  Keep clicking until your score matches the target score without going over.  If your score is more than the target score... you lose.</p>
+    </div>
+  </div>
+
+
+  <!-- <h1>Number to Guess: <span id="number-to-guess"></span></h1> -->
+
+<div class = "row">
+
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div class="panel panel-default" id="game-panel" style= "text-align: center">
+      <div class="panel-heading">
+        <h3 class="panel-title" style="color:black">Target Score:</h3>
+      </div>
+      
+      <div class="panel-body">
+
+        <p id="score">Your Score: 0</p>
+
+        <p id="wins">Wins: 0</p>
+
+        <p id="losses">Losses: 0</p>
+
+
+
+      </div>
+    </div>
+  </div> 
+
+
+  <!-- Note that this div is now empty. We will fill it dynamically -->
+  <div id="crystals">
+  </div>
+
+  <!-- JAVASCRIPT  -->
+  <!-- ========================================= -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  <script  type='text/javascript' src='assets/javascript/game.js'></script>
+
+</div> 
+
+</body>
+
+
+</html>
