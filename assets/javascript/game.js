@@ -29,7 +29,7 @@
   // function to generate random numbers given a min and a max range
   function randomInt(min,max)
   {
-      return Math.floor(Math.random()*(max-min+1)+min);
+    return Math.floor(Math.random()*(max-min+1)+min);
   };
 
   function userWin(){
@@ -55,10 +55,18 @@
     crystalThreeValue = Math.floor(Math.random() * 12) + 1;
     crystalFourValue = Math.floor(Math.random() * 12) + 1;
 
+    $("#crystal-0").attr("data-crystalvalue", crystalOneValue);
+    $("#crystal-1").attr("data-crystalvalue", crystalTwoValue);
+    $("#crystal-2").attr("data-crystalvalue", crystalThreeValue);
+    $("#crystal-3").attr("data-crystalvalue", crystalFourValue);
+
+    //console.log(crystalOneValue);
     targetNumber = randomInt(19,120);
     $(".panel-title").text("Target Score: " + targetNumber);
     $("#score").text("Your Score: " + 0);
     counter = 0;
+
+
   };
 
   // Next we create a for loop to create crystals for every numberOption.
@@ -70,6 +78,8 @@
     // First each crystal will be given the class ".crystal-image".
     // This will allow the CSS to take effect.
     imageCrystal.addClass("crystal-image");
+
+    imageCrystal.attr('id', 'crystal-'+i);
 
     // Each imageCrystal will be given a src link to the crystal image
     imageCrystal.attr("src", crystalImages[i]);
@@ -121,6 +131,7 @@
       userLoss();
 
       resetValues();
+
     }
 
   });
